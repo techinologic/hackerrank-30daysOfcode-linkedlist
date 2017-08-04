@@ -4,6 +4,7 @@ import java.util.*;
 class Node {
     int data;
     Node next;
+
     Node(int d) {
         data = d;
         next = null;
@@ -11,17 +12,15 @@ class Node {
 }
 
 class Solution {
-    public static Node insert(Node head,int data) {
+    public static Node insert(Node head, int data) {
         //Complete this method
-
-
-
+        
         return head;
     }
 
     public static void display(Node head) {
         Node start = head;
-        while(start != null) {
+        while (start != null) {
             System.out.print(start.data + " ");
             start = start.next;
         }
@@ -32,9 +31,9 @@ class Solution {
         Node head = null;
         int N = sc.nextInt();
 
-        while(N-- > 0) {
+        while (N-- > 0) {
             int ele = sc.nextInt();
-            head = insert(head,ele);
+            head = insert(head, ele);
         }
         display(head);
         sc.close();
