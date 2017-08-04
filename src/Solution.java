@@ -1,21 +1,36 @@
 import java.io.*;
 import java.util.*;
 
+// class that implements nodes
 class Node {
     int data;
     Node next;
+
+    // class constructor that takes in data.
     Node(int d) {
         data = d;
         next = null;
     }
+
 }
 
 class Solution {
     public static Node insert(Node head,int data) {
         //Complete this method
 
+        // if head is null, assigns new node as head
+        if (head == null) {
+            return new Node(data);
+        }
 
-
+        // if next is null, assigns new node as next
+        if (head.next == null) {
+            head.next = new Node(data);
+        }
+        else {
+            // recursion
+            insert(head.next, data);
+        }
         return head;
     }
 
